@@ -3,32 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>Developer Site | Contact</title>
 
     <meta name="robots" content="index,follow">
-    <meta name="description" content="Developer Site Main Page">
+    <meta name="description" content="Developer Site Contact Page">
     <meta name="author" content="Epsilon">
-    <meta name="keywords" content="Developer, Site, Full-Stack">
+    <meta name="keywords" content="Developer, Site, Full-Stack, Contact">
 
 </head>
 <body>
     <header>
         <nav>
             <p>Epsilon</p>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="articles.html">Articles</a>
-            <a href="contact.html">Contact</a>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="articles.html">Articles</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>          
+            </ul>
         </nav>
         <h1>Contact</h1>
     </header>
     <main>
-        <address>
-            <p>Main street 12</p>
-            <p>Bucharest, Zip 12345</p>
-            <p><a href="tel:11234567890">(123) 456-7890</a></p>
-            <p><a href="mailto:epsilon@example.com">epsilon@example.com</a></p>
-        </address>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"/>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+
+            <input type="submit">
+        </form>
     </main>
     <footer>
         <p>&copy; all rights reserved 2026</p>
