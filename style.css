@@ -51,7 +51,7 @@ html {
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: "Google Sans", 'Times New Roman', serif;
     font-size: var(--font-size-base);
     color: var(--color-text);
     background-color: var(--color-bg);
@@ -65,7 +65,7 @@ body {
    TYPOGRAPHY
    ============================================ */
 h1, h2, h3 {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: "Google Sans", 'Times New Roman', serif;
     line-height: 1.2;
 }
 
