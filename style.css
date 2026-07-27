@@ -12,6 +12,16 @@
     --color-surface: #f9fafb;
     --color-tag-bg: #f3f4f6;
 
+    --color-bg-dark: #000000;
+    --color-text-dark: #e5e5e5;
+    --color-text-muted-dark: #7f8694;
+    --color-border-dark: #14161a;
+    --color-border-strong-dark: #e5e5e5;
+    --color-accent-dark: #1452da;
+    --color-accent-hover-dark: #2758e2;
+    --color-surface-dark: #040506;
+    --color-tag-bg-dark: #090a0c;
+
     --font-size-base: 1rem;
     --font-size-sm: 0.875rem;
     --font-size-lg: 1.25rem;
@@ -35,6 +45,23 @@
     --transition: 150ms ease;
 }
 
+#theme-switch {
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+    border-radius: 50%;
+    background-color: light-dark(var(--color-bg), var(--color-bg-dark));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-switch svg {
+    fill: light-dark(var(--color-text), var(--color-text-dark));
+}
+
 
 /* ============================================
    RESET & BASE
@@ -53,8 +80,8 @@ html {
 body {
     font-family: "Google Sans", 'Times New Roman', serif;
     font-size: var(--font-size-base);
-    color: var(--color-text);
-    background-color: var(--color-bg);
+    color: light-dark(var(--color-text), var(--color-text-dark));
+    background-color: light-dark(var(--color-bg), var(--color-bg-dark));
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
@@ -126,12 +153,12 @@ nav {
     align-items: center;
     gap: var(--space-xs);
     text-decoration: none;
-    color: var(--color-text);
+    color: light-dark(var(--color-text), var(--color-text-dark));
 }
 
 .nav-brand:hover {
     text-decoration: none;
-    color: var(--color-text);
+    color: light-dark(var(--color-text), var(--color-text-dark));
 }
 
 .nav-brand img {
@@ -159,12 +186,12 @@ nav {
 
 .nav-links li + li::before {
     content: "/";
-    color: var(--color-text-muted);
+    color: light-dark(var(--color-text-muted), var(--color-text-muted-dark));
     margin-right: var(--space-xs);
 }
 
 .nav-links a {
-    color: var(--color-text);
+    color: light-dark(var(--color-text), var(--color-text-dark));
     font-size: var(--font-size-sm);
     padding: var(--space-xs) var(--space-sm);
     border-radius: var(--radius-sm);
@@ -173,7 +200,7 @@ nav {
 
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
-    background-color: var(--color-tag-bg);
+    background-color: light-dark(var(--color-tag-bg), var(--color-tag-bg-dark));
     color: var(--color-accent);
     text-decoration: none;
 }
@@ -205,7 +232,7 @@ body > footer {
     padding-block: var(--space-md);
     text-align: center;
     font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
+    color: light-dark(var(--color-text-muted), var(--color-text-muted-dark));
 }
 
 
@@ -230,7 +257,7 @@ body > footer {
 .hero-subtitle {
     font-size: var(--font-size-lg);
     font-weight: normal;
-    color: var(--color-text-muted);
+    color: light-dark(var(--color-text-muted), var(--color-text-muted-dark));
     margin-bottom: var(--space-xl);
 }
 
@@ -259,9 +286,9 @@ body > footer {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--color-text-muted);
+    color: light-dark(var(--color-text-muted), var(--color-text-muted-dark));
     border-bottom: 1px solid var(--color-border);
-    background-color: var(--color-surface);
+    background-color: light-dark(var(--color-surface), var(--color-surface-dark));
 }
 
 /* Projects list */
@@ -277,7 +304,7 @@ body > footer {
 }
 
 #projects ul li:hover {
-    background-color: var(--color-surface);
+    background-color: light-dark(var(--color-surface), var(--color-surface-dark));
 }
 
 /* Work experience */
@@ -297,7 +324,7 @@ body > footer {
 
 #workExperience p {
     font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
+    color: light-dark(var(--color-text-muted), var(--color-text-muted-dark));
     margin-bottom: var(--space-sm);
 }
 
@@ -320,13 +347,13 @@ body > footer {
 
 #education ul li {
     font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
+    color: light-dark(var(--color-text-muted), var(--color-text-muted-dark));
 }
 
 /* Use ::before for bullets — consistent with the nav separator approach */
 #education ul li::before {
     content: "— ";
-    color: var(--color-border-strong);
+    color: light-dark(var(--color-border-strong), var(--color-border-strong-dark));
 }
 
 
@@ -396,7 +423,7 @@ body > footer {
 .form-group label {
     font-size: var(--font-size-sm);
     font-weight: bold;
-    color: var(--color-text);
+    color: light-dark(var(--color-text), var(--color-text-dark));
 }
 
 .form-group input,
@@ -407,8 +434,8 @@ body > footer {
     border-radius: var(--radius-sm);
     font-size: var(--font-size-base);
     font-family: inherit;
-    color: var(--color-text);
-    background-color: var(--color-bg);
+    color: light-dark(var(--color-text), var(--color-text-dark));
+    background-color: light-dark(var(--color-bg), var(--color-bg-dark));
     transition: border-color var(--transition), box-shadow var(--transition);
 }
 
